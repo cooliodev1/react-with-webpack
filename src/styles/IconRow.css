@@ -43,11 +43,4 @@
     padding-right: 1em;
     font-size: 11px;
   }
-  .page-container{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    color: white;
-    background-color: lightgrey;
-    overflow: scroll;
-  }
+ 

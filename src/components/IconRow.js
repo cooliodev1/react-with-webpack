@@ -6,7 +6,6 @@ import Profile from "../components/Profile";
 import Calendar from "../components/Calendar";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Link
 } from "react-router-dom";
@@ -15,37 +14,55 @@ import "../styles/IconRow.css";
 const IconRow = () => {
   return (
     <Router>
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/settings">Settings</Link>
-          </li>
-          <li>
-            <Link to="/calendar">Calendar</Link>
-          </li>
-          <li>
-            <Link to="/notifications">Notifications</Link>
-          </li>
-          <li>
-            <Link to="/profile">Profile</Link>
-          </li>
-        </ul>
-      </nav>
 
-      {/* A <Switch> looks through its children <Route>s and
-          renders the first one that matches the current URL. */}
-      <Switch>
-          <Route path="/home" component={Home}></Route>
-          <Route path="/calendar" component={Calendar}></Route>
-          <Route path="/notifications" component={Notifications}></Route>
-          <Route path="/settings" component={Settings}></Route>
-          <Route path="/profile" component={Profile}></Route>
-      </Switch>
-    </div>
+      
+    <Route path="/home" component={Home}></Route>
+    <Route path="/calendar" component={Calendar}></Route>
+    <Route path="/notifications" component={Notifications}></Route>
+    <Route path="/settings" component={Settings}></Route>
+    <Route path="/profile" component={Profile}></Route>
+
+<div className="floating-div">
+  <ul className="nav-menu">
+    
+    <li className="menu-parent">
+      <Link to="/home">
+        <img className="icon-img" src={"https://assets.codepen.io/2599843/home.svg"}/>
+        <p>Home</p>
+      </Link>
+    </li>    
+    
+    <li className="menu-parent">
+      <Link to="/settings">
+        <img className="icon-img" src={"https://assets.codepen.io/2599843/settings.svg"}/>
+        <p>Settings</p>
+      </Link>
+    </li>
+    
+    <li className="menu-parent">
+      <Link to="/calendar">
+        <img className="icon-img" src={"https://assets.codepen.io/2599843/calendar.svg"}/>
+        <p>Calendar</p>
+      </Link>
+    </li>
+    
+    <li className="menu-parent">
+      <Link to="/notifications">
+        <img className="icon-img" src={"https://assets.codepen.io/2599843/notifications.svg"}/>
+        <p>Notifications</p>
+      </Link>
+    </li>
+    
+    <li className="menu-parent">
+      <Link to="/profile">
+        <div className="icon-img"/>
+        <p>Profile</p>
+      </Link>
+    </li>
+    
+  </ul>
+</div>
+      
   </Router>
 
   );

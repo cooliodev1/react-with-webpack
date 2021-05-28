@@ -1,4 +1,15 @@
-body {
+/* body {
   color: #1ee0e0;
   background-color: #120e26;
+} */
+
+
+
+.page-container{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: lightgrey;
+  overflow: scroll;
 }

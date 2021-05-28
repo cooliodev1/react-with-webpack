@@ -1,5 +1,10 @@
 import React from "react";
 import Settings from "../components/Settings";
+import Home from "../components/Home";
+import Notifications from "../components/Notifications";
+import Profile from "../components/Profile";
+import Calendar from "../components/Calendar";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,7 +23,7 @@ const IconRow = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li>
             <Link to="/settings">Settings</Link>
@@ -38,20 +43,19 @@ const IconRow = () => {
       {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/home">
+        <Route path="/home" component={Home}>
           <Home />
         </Route>
-        <Route path="/calendar">
+        <Route path="/calendar" component={Calendar}>
           <Calendar />
         </Route>
-        <Route path="/notifications">
+        <Route path="/notifications" component={Notifications}>
           <Notifications />
-          <h1>test</h1>
         </Route>
         <Route path="/settings" component={Settings}>
         <Settings />
         </Route>
-        <Route path="/profile">
+        <Route path="/profile" component={Profile}>
           <Profile />
         </Route>
       </Switch>
@@ -61,24 +65,24 @@ const IconRow = () => {
   );
 };
 
-function Home() {
-  return <h2>Home</h2>;
-}
+// function Home() {
+//   return <h2>Home</h2>;
+// }
 
-function Calendar() {
-  return <h2>Calendar</h2>;
-}
+// function Calendar() {
+//   return <h2>Calendar</h2>;
+// }
 
 // function Settings() {
 //   return <h2>Settings</h2>;
 // }
 
-function Notifications() {
-  return <h2>Notifications2</h2>;
-}
+// function Notifications() {
+//   return <h2>Notifications2</h2>;
+// }
 
-function Profile() {
-  return <h2>Profile</h2>;
-}
+// function Profile() {
+//   return <h2>Profile</h2>;
+// }
 
 export default IconRow;

@@ -4,7 +4,6 @@ import Home from "../components/Home";
 import Notifications from "../components/Notifications";
 import Profile from "../components/Profile";
 import Calendar from "../components/Calendar";
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,10 +13,7 @@ import {
 import "../styles/IconRow.css";
 
 const IconRow = () => {
-  
-
   return (
-
     <Router>
     <div>
       <nav>
@@ -43,21 +39,11 @@ const IconRow = () => {
       {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/home" component={Home}>
-          <Home />
-        </Route>
-        <Route path="/calendar" component={Calendar}>
-          <Calendar />
-        </Route>
-        <Route path="/notifications" component={Notifications}>
-          <Notifications />
-        </Route>
-        <Route path="/settings" component={Settings}>
-        <Settings />
-        </Route>
-        <Route path="/profile" component={Profile}>
-          <Profile />
-        </Route>
+          <Route path="/home" component={Home}></Route>
+          <Route path="/calendar" component={Calendar}></Route>
+          <Route path="/notifications" component={Notifications}></Route>
+          <Route path="/settings" component={Settings}></Route>
+          <Route path="/profile" component={Profile}></Route>
       </Switch>
     </div>
   </Router>

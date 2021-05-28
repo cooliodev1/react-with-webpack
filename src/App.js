@@ -1,12 +1,10 @@
 import React from "react";
-import HelloWorld from "./components/HelloWorld";
-import RenderForm from "./components/RenderForm";
+import IconRow from "./components/IconRow";
 
 const App = () => {
   return (
     <div>
-      <HelloWorld />
-      <RenderForm />
+      <IconRow />
     </div>
   );
 };

@@ -5,9 +5,10 @@ const Calendar = () => {
   
 
   return (
-
-     <h1>Calendar here</h1>
-
+  <React.Fragment>
+      <h1>Calendar here</h1>
+      
+  </React.Fragment>
   );
 };
 
